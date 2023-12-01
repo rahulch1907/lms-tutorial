@@ -38,18 +38,16 @@ export const CategoryItem = ({
     };
     
     return (
-        <button 
-         onClick={onClick}
-         className={cn(
-            "py-2 px-3 text-sm border border-slate-300 rounded-full flex items-center gap-x-1 hover:border-sky-700 transition",
-            isSelected && "border-sky-700 bg-sky-200/40 text-sky-900"
-         )}
-         type="button"
-        >
-            {Icon && <Icon size={24} />}
-            <div className="truncate">
-                {label}
-            </div>
-        </button>
-    )
+      <button
+        onClick={onClick}
+        className={cn(
+          "py-2 px-3 text-sm border-slate-700 rounded-full flex items-center gap-x-1 hover:border-sky-500 transition border-2 bg-slate-100",
+          isSelected && "border-sky-500 bg-sky-200/40 text-sky-900"
+        )}
+        type="button"
+      >
+        {Icon && <Icon size={24} />}
+        <div className="truncate">{label}</div>
+      </button>
+    );
 }
